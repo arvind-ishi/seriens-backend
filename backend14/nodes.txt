@@ -1,0 +1,7 @@
+sebse pahile hame cuch chije samjni hai alag alag 
+
+
+1) cookie kaise set karate hai 
+2)bcrypt kaise use karte hai for passoword incription and decription 
+3)jwt kay hai and jwt main data kaise dalana hai and nikalna hai 
+

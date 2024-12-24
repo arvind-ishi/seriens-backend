@@ -1,0 +1,15 @@
+setting up parsers for form
+
+setting up ejs for ejs pages
+             npm install the ejs 
+             
+
+setting up public static files 
+
+
+dynamic routing 
+
+
+        dynamic routing
+
+        how to get data coming from frontend ata backend route

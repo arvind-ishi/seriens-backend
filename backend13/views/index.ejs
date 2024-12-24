@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+  <div class="main h-full w-full bg-zinc-600">
+    <div class="read">
+      <a class="text-3xl text-blue-600  " href="/read">read page </a>
+    </div>
+
+    <form action="/create" method="post">
+
+      <!-- name  -->
+      <input type="text" placeholder="name" class="text-3xl border" name="name">
+      <!-- email -->
+      <input type="text" placeholder="email" class="" name="email">
+      <!-- image url  -->
+      <input type="text" placeholder="image url " class="" name="image">
+    <!-- submit button -->
+      <button value="submit">create user</button>
+    </form>
+
+  </div>
+
+
+  <script src="/javascript/script.js"></script>
+</body>
+
+</html>
