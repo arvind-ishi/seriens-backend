@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+        <h1 class="mb-4">
+            <a href="/login" class="px-10 text-3xl bg-blue-700 ">login to the page</a>
+        </h1>
+        <div class="text-3xl bg-blue-700 rounded-md p-2 mb-5 ">create user </div>
+    
+        <form action="/create" method="post">
+            <input class="bg-zinc-700 text-white rounded-md p-2 outline-none m-2"  type="text" placeholder="username" name="username" >
+            <input class="bg-zinc-700 text-white rounded-md p-2 outline-none m-2"  type="text" placeholder="email" name="email" >
+            <input class="bg-zinc-700 text-white rounded-md p-2 outline-none m-2"  type="text" placeholder="password" name="password" >
+            <input class="bg-zinc-700 text-white rounded-md p-2 outline-none m-2"  type="text" placeholder="age" name="age" >
+            <button value="create user" class="text-white bg-blue-700 p-2 ml-3 rounded-md">create user</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

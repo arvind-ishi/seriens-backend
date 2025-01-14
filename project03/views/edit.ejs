@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full h-screen bg-zinc-800 text-white p-10 ">
+        <div class=" flex justify-end">
+            <a class="bg-red-500 px-3 py-2 rounded-md font-sm  " href="/logout">logout</a>
+        </div>
+
+        <h5 class="mb-5 font-light"> edit user  . </h5>
+
+        <form  action="/update/<%= post._id %>" method="post" >
+
+
+            <textarea  placeholder="what your in mind ?" name="content"
+                class="text-white w-1/3  rounded-md outline-none resize-none bg-transparent border-2 border-zinc-600">
+                  <%= post.content %>
+            </textarea>
+            <input type="submit" class="bg-green-500 block rounded-md w-40 px-3 py-2 mt-4 text-black" value="upadate  a post ">
+        </form>
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

@@ -16,65 +16,39 @@
             <a href="/" class="text-2xl text-blue-600 ">go to home </a>
         </div>
         <h1 class="tracking-tighter text-3xl mb-3">All users</h1>
-<!-- ############# -->
-        <!-- users all constain div  -->
-        <!-- <div class="users flex gap-3 flex-wrap"> -->
-            <!-- one container all  -->
-            <!-- <% users.forEach(function(user){ %> -->
-<!--           -->
-                <!-- <div class="user w-72  bg-zinc-700  p-4 rounded-md mb-5"> -->
 
-                    <!-- <div class="w-full h-52 rounded-lg bg-blue-700"> -->
-                        <!-- <img src=" <%= user.image %>" alt=""> -->
-                    <!-- </div> -->
-
-                    <!-- <h3 class="mt-5  text-gray-900"> -->
-                        <!-- <%= user.name %></h3> -->
-
-                    <!-- <h4 class="mt-2  text-gray-500"> -->
-                        <!-- <%= user.email %></h4> -->
-
-                            <!-- <div class="mt-10  justify-between"> -->
-                                <!-- <a href="/edit" class="text-gray-400">edit user</a> -->
-                                <!-- <a href="/delete" class="text-red-500">delete user</a> -->
-                            <!-- </div> -->
-  <!-- <% }) %> -->
-                <!-- </div> -->
-<!-- ######### -->
-
-
-<!-- Users container -->
-<div class="users flex gap-3 flex-wrap mt-4">
-    <!-- One user container -->
-
-    <% if(users.length > 0){ %>
-    <% users.forEach(function(user){ %>
-    <div class="user max-w-sm bg-zinc-700 p-4 rounded-md mb-5">
-        <!-- User image -->
-        <div class="w-full h-52 rounded-lg overflow-hidden bg-blue-700">
-            <img src="<%= user.image %>" alt="User Image" class="w-full h-full object-cover">
+        <!-- Users container -->
+        <div class="users flex gap-3 flex-wrap mt-4">
+                 <!-- One user container -->
+ 
+            <% if(users.length> 0){ %>
+                <% users.forEach(function(user){ %>
+                    <div class="user max-w-sm bg-zinc-700 p-4 rounded-md mb-5">
+                        <!-- User image -->
+                        <div class="w-full h-52 rounded-lg overflow-hidden bg-blue-700">
+                            <img src="<%= user.image %>" alt="User Image" class="w-full h-full object-cover">
+                        </div>
+                        <!-- User details -->
+                        <h1 class="mt-5 text-lg font-bold text-white">
+                            <%= user.name %>
+                        </h1>
+                        <p class="mt-2 text-gray-400">
+                            <%= user.email %>
+                        </p>
+                        <!-- Action links -->
+                        <div class="mt-10 flex justify-between">
+                            <a href="/edit/<%= user._id %>" class="text-gray-400">Edit User</a>
+                            <a href="/delete/<%= user._id %>" class="text-red-500">Delete User</a>
+                        </div>
+                    </div>
+                    <% }) %>
         </div>
-        <!-- User details -->
-        <h1 class="mt-5 text-lg font-bold text-white">
-            <%= user.name %>
-        </h1>
-        <p class="mt-2 text-gray-400">
-            <%= user.email %>
-        </p>
-        <!-- Action links -->
-        <div class="mt-10 flex justify-between">
-            <a href="/edit/<%= user._id %>" class="text-gray-400">Edit User</a>
-            <a href="/delete/<%= user._id %>" class="text-red-500">Delete User</a>
-        </div>
-    </div>
-    <% }) %>
-</div>
- <% } else{ %>
-    <h3>no users yet </h3>
-<% }  %>
+        <% } else{ %>
+            <h3>no users yet </h3>
+            <% } %>
                 <!-- second -->
 
-        </div>
+    </div>
 
     </div>
 
@@ -82,3 +56,38 @@
 </body>
 
 </html>
+
+
+
+
+
+
+<!-- end code  -->
+
+<!-- ##### nodes  -->
+
+<!-- ############# -->
+<!-- users all constain div  -->
+<!-- <div class="users flex gap-3 flex-wrap"> -->
+<!-- one container all  -->
+<!-- <% users.forEach(function(user){ %> -->
+<!--           -->
+<!-- <div class="user w-72  bg-zinc-700  p-4 rounded-md mb-5"> -->
+
+<!-- <div class="w-full h-52 rounded-lg bg-blue-700"> -->
+<!-- <img src=" <%= user.image %>" alt=""> -->
+<!-- </div> -->
+
+<!-- <h3 class="mt-5  text-gray-900"> -->
+<!-- <%= user.name %></h3> -->
+
+<!-- <h4 class="mt-2  text-gray-500"> -->
+<!-- <%= user.email %></h4> -->
+
+<!-- <div class="mt-10  justify-between"> -->
+<!-- <a href="/edit" class="text-gray-400">edit user</a> -->
+<!-- <a href="/delete" class="text-red-500">delete user</a> -->
+<!-- </div> -->
+<!-- <% }) %> -->
+<!-- </div> -->
+<!-- -- ######### -->

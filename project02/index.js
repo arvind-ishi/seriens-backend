@@ -40,21 +40,25 @@ app.get('/edit/:userid',async function (req,res) {
 
 
 app.post('/update/:userid',async function (req,res) {
-    let one =  await userModels.findOneAndUpdate({_id :req.params.userid},{
+    let apps =  await userModels.findOneAndUpdate({_id :req.params.userid},{
         name:req.body.name,
         email:req.body.email,
         image:req.body.image
         
-    },{new :true})
+    },{new :true})// true means the data can be the upadete new save return 
 
    res.redirect('/read')
   })
+
+  //deleting the module by this id get 
 app.get('/delete/:id', async function (req,res) {
     let user = await userModels.findOneAndDelete({ _id : req.params.id });
     // res.send(deleteduser);
   res.redirect('/read');
 })
 
+
+//creating the page by the card this 
 app.post('/create',async function(req,res){
 
   let createduser =  await userModels.create({
@@ -63,6 +67,7 @@ app.post('/create',async function(req,res){
             image:req.body.image
             
     })
+    //redirecting to the read page 
   res.redirect('/read');
 
 })
@@ -70,7 +75,7 @@ app.post('/create',async function(req,res){
 
 
 
-
+//lisning the port by the this 
 let port = 3000;
 
 app.listen(port,function(){
